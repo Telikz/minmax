@@ -14,7 +14,7 @@ export default function gettingStartedMeditation() {
                     <div class="hero h-min bg-base-100">
                         <div class="hero-content">
                             <div class="max-w">
-                                <h1 class="text-5xl font-bold mb-6">Getting started with meditation</h1>
+                                <h1 class="font-bold mb-6 text-4xl">Getting started with meditation</h1>
                                 <p class="mb-6">Welcome to the meditation section of Minmax! We're excited to help you begin your journey into the world of meditation. Regardless of your experience level, this guide will provide you with the essential information to start meditating effectively. Follow the steps below to embark on a transformative path towards mental clarity, focus, and inner peace.</p>
                                 <h1 class="text-3xl font-bold mb-6">Why We Meditate</h1>
                                 <p class="mb-6">Meditation is an ancient practice that has been used by various cultures and traditions for thousands of years. It has gained widespread popularity in recent times due to its numerous benefits for mental and physical well-being. Here are some of the main reasons why people meditate:</p>

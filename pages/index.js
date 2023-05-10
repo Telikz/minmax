@@ -14,7 +14,7 @@ export default function Home() {
           <div class="hero h-min bg-base-100">
             <div class="hero-content text-center">
               <div class="max-w pt-6">
-                <Link href='//' class="btn btn-ghost text-primary text-5xl font-extrabold">MINMAX</Link>
+              <h1 class="text-5xl font-bold">MINMAX</h1>
                 <p className='py-4'>
                   Welcome to Minmax – your ultimate skill-maximizing resource. Catering to athletes, artists, and life enthusiasts, our platform is designed to help you excel.
                   MinMax turns personal growth into a game, enabling you to track progress, set goals, and receive tailored recommendations to unlock your potential.
