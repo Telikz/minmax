@@ -7,8 +7,8 @@ export default function Layout({ children, home }) {
         <div class="dropdown dropdown-bottom">
           <label tabindex="0" class="btn m-1 btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></label>
           <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-200 rounded-box w-52 mt-3">
-            <li><Link href='/Meditation/learnMeditation'>Meditation Timer</Link></li>
-            <li><Link href='/posts/first-post'>Item 2</Link></li>
+            <li><Link href='/Meditation/MeditationTimer'>Meditation Timer</Link></li>
+            <li><Link href='/test'>Item 2</Link></li>
             <li><Link href='/test/test'>Testing</Link></li>
             <li><Link href='/test'>Quiz</Link></li>
           </ul>
@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
 
       <footer class="footer bg-cover text-base-content mt-auto font-extralight">
         <div>
-          <p>©2023 Minmax.</p>
+          <p className='text-xs'>©2023 Minmax.</p>
         </div>
       </footer>
     </div>

@@ -18,11 +18,9 @@ export default function AboutMeditation() {
             </div>
           </div>
           <body data-page="meditation">
-</body>
-
+          </body>
         </div><div className='container mx-auto p-4'>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
             <Link href='/Meditation/GettingStarted' class="card bg-base-100 shadow-xl image-full">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Getting Started</h2>
