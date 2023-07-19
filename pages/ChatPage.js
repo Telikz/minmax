@@ -5,6 +5,7 @@ import Head from 'next/head';
 export default function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const inputRef = useRef(null);
 
   const endOfMessagesRef = useRef(null);
 
@@ -13,6 +14,10 @@ export default function ChatPage() {
   };
 
   useEffect(scrollToBottom, [messages]);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -44,23 +49,26 @@ export default function ChatPage() {
       <Head>
         <title>Chat - MINMAX</title>
       </Head>
-      <section className="flex flex-col h-screen">
-        <div className="flex-grow overflow-auto p-4">
+      <section className="flex flex-col p-2" style={{ height: 'calc(100vh - 85px)' }}>
+        <div className="flex-grow overflow-auto bg-base-200 mb-2 rounded-md p-4">
           {messages.map((message, index) => (
-            <div key={index} className={` my-2 p-3 rounded ${message.user === 'You' ? ' bg-base-200 shadow-xl ml-auto' : ' bg-base-200 shadow-xl mr-auto'}`} style={{ maxWidth: '80%' }}>
+            <div key={index} className={`my-3 p-2 md:p-3 rounded ${message.user === 'You' ? ' bg-base-100 shadow-xl ml-auto' : 'bg-base-100 shadow-xl mr-auto'}`} style={{ maxWidth: '90%' }}>
               <strong>{message.user}: </strong> {message.text}
             </div>
           ))}
           <div ref={endOfMessagesRef}></div>
         </div>
-        <form onSubmit={handleSubmit} className="m-2">
+        <form onSubmit={handleSubmit} className="flex">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="input border w-full px-4"
+            className="flex-grow input border input-md px-2 py-1 text-md"
             placeholder="Type your message here..."
+            autoComplete="off"
+            ref={inputRef}
           />
+          <button type="submit" className="btn btn-md w-1/5 bg-primary hover:bg-primary-focus text-primary-content px-4 rounded-md ml-2">Send</button>
         </form>
       </section>
     </Layout>
