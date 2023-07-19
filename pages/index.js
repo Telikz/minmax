@@ -13,7 +13,7 @@ export default function Home() {
         <div className='flex flex-col'>
           <div class="hero h-min bg-base-100">
             <div class="hero-content text-center">
-              <div class="max-w pt-6">
+              <div class="max-w">
               <h1 class="text-5xl font-bold">MINMAX</h1>
                 <p className='py-4'>
                   Welcome to Minmax – your ultimate skill-maximizing resource. Catering to athletes, artists, and life enthusiasts, our platform is designed to help you excel.

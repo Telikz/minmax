@@ -17,7 +17,6 @@ export default function QuizPage() {
     
     
     const fetchQuestionAndOptions = async () => {
-        const prompt = "Generate a question related to everything along with 4 plausible answer choices. Indicate the correct answer with an asterisk (*) Dont add any A B C Ds OR 1234s";
     
         const { data } = await axios.post('/api/gptQuiz', { prompt });
         console.log("GPT-4 response data:", data);
