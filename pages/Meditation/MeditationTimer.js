@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import Layout, { siteTitle } from '/components/layout';
+import { useState, useEffect, useRef } from 'react';
+import Layout from '/components/layout';
 
 export default function Meditation() {
   const [time, setTime] = useState(5);

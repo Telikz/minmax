@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Layout from '../components/layout';
+import Layout from '/components/layout';
 import Head from 'next/head';
 
-export default function ChatPage() {
+export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
@@ -23,7 +23,7 @@ export default function ChatPage() {
     event.preventDefault();
     if (input !== "") {
       setMessages([...messages, { text: input, user: "You" }]);
-      const response = await fetch('/api/chat', {
+      const response = await fetch('/api/GeneralChat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

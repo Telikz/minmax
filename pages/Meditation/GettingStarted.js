@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '/components/layout';
+import ChatWidget from '../../components/ChatWidget';
 import Link from 'next/link';
 
 export default function gettingStartedMeditation() {
@@ -39,6 +40,7 @@ export default function gettingStartedMeditation() {
                                     <li class="mb-3"><strong>Explore different techniques:</strong> Once you're comfortable with basic mindfulness meditation, explore other techniques such as loving-kindness meditation, body scan, or mantra meditation to find what resonates best with you.</li>
                                 </ol>
                                 <p>Remember, meditation is a skill that takes time and practice to develop. Be patient with yourself and keep an open mind as you explore this powerful tool for personal growth. The Minmax community is here to support you every step of the way!</p>
+                                <ChatWidget prompt="Hello, welcome to our page!" api="/api/GuruChat" />
                             </div>
                         </div>
                     </div>

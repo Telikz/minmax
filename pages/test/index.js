@@ -14,23 +14,21 @@ export default function QuizPage() {
             [array[i], array[j]] = [array[j], array[i]];
         }
     }
-    
-    
+
     const fetchQuestionAndOptions = async () => {
-    
         const { data } = await axios.post('/api/gptQuiz', { prompt });
         console.log("GPT-4 response data:", data);
-    
+
         if (!data.result || data.result.length < 2) {
             console.error('Invalid GPT-4 response data.');
             return;
         }
-    
+
         const cleanedData = data.result.filter((item) => item.trim() !== '');
         const question = cleanedData[0];
         let allOptions = [];
         let optionsText;
-    
+
         if (cleanedData.length === 2) {
             optionsText = cleanedData[1];
             const optionsRegex = /([A-Da-d][\.\:\)])\s\*?[^\s]+\s[^A-Da-d]+/g;
@@ -38,25 +36,35 @@ export default function QuizPage() {
         } else {
             allOptions = cleanedData.slice(1);
         }
-    
+
         allOptions = allOptions.flatMap((option) => option.split(/(?=[A-Da-d][\.\:\)])/));
         allOptions = allOptions.filter((option) => option.trim() !== '');
-    
+
         const correctAnswer = allOptions.find((option) => option.includes('*'));
-        const sanitizedCorrectAnswer = correctAnswer.replace(/^\*/, '').replace(/^[A-Da-d][\.\:\)]\s*/, '').trim();
-    
+        if (!correctAnswer) {
+            // Handle error, maybe throw or return a default value
+            throw new Error("No correct answer found.");
+        }
+        
+        const sanitizedCorrectAnswer = correctAnswer
+            .replace(/^\*/, '')  // remove asterisk at start of string
+            .replace(/^-/, '')  // remove dash at start of string
+            .trim();  // remove leading and trailing whitespace
+
         const sanitizedOptions = allOptions.map((option) => {
-            const optionWithoutAsterisk = option.replace(/^\*/, '').trim();
-            const optionWithoutPrefix = optionWithoutAsterisk.replace(/^[A-Da-d][\.\:\)]\s*/, '').trim();
-            return optionWithoutPrefix;
+            const optionWithoutAsterisk = option
+                .replace(/^\*/, '')  // remove asterisk at start of string
+                .replace(/^-/, '')  // remove dash at start of string
+                .trim();  // remove leading and trailing whitespace
+            return optionWithoutAsterisk;
         });
-    
+
         // Shuffle the options
         shuffleArray(sanitizedOptions);
-    
+
         // Update the correct answer's index
         const correctAnswerIndex = sanitizedOptions.findIndex((option) => option === sanitizedCorrectAnswer);
-    
+
         setQuizData({
             question: question,
             options: sanitizedOptions,
@@ -64,7 +72,6 @@ export default function QuizPage() {
             correctAnswerIndex: correctAnswerIndex,
         });
     };
-    
 
     const handleAnswer = (selectedOption) => {
         setAnswer(selectedOption);
