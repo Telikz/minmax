@@ -2,17 +2,17 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Layout, { siteTitle } from '/components/layout';
 
-export default function AboutCommunication() {
+export default function IndexNutrition() {
   return (
     <Layout>
       <Head>
-        <title>Communication</title>
+        <title>Nutrition</title>
       </Head>
       <main className="flex-col">
         <div class="hero bg-base-100">
           <div class="hero-content text-center">
             <div class="max-w">
-              <h1 class="text-5xl font-bold">Communication</h1>
+              <h1 class="text-5xl font-bold">Nutrition</h1>
               <p class="py-4">
                 </p>
             </div>

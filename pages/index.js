@@ -61,7 +61,7 @@ export default function Home() {
                   <h2 class="card-title text-center">Sleep Optimization</h2>
                   <p className=' text-center'>Improve your sleep quality and establish healthy sleep habits to boost your overall health, productivity, and well-being.</p>
                 </div>
-              </Link><Link href='/Cheat' class="card bg-base-100 shadow-xl image-full">
+              </Link><Link href='/Cheats' class="card bg-base-100 shadow-xl image-full">
                 <div class="card-body items-center">
                   <h2 class="card-title text-center">Cheat Codes</h2>
                   <p className=' text-center'>Unlock shortcuts, tips, and tricks to accelerate your progress in various skills, streamline your learning process, and achieve your goals more efficiently.</p>

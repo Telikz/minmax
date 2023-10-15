@@ -17,12 +17,8 @@ export default function AboutMeditation() {
                 Meditation is invaluable for optimizing skills and performance. It helps improve focus, decision-making, motivation, and offers various health benefits. Regular practice cultivates self-awareness, leading to mindful decision-making. Integrating meditation into your routine can effectively support your goals and enhance overall success.</p>
             </div>
           </div>
-          <body data-page="meditation">
-          </body>
-
         </div><div className='container mx-auto p-4'>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
+          <div className="grid col-auto gap-4">
             <Link href='/Meditation/GettingStarted' class="card bg-base-100 shadow-xl image-full">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Getting Started</h2>

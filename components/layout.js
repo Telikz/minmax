@@ -2,19 +2,21 @@ import Link from 'next/link';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" data-theme="dark">
       <div class="navbar bg-base-200 mb-auto">
         <div class="dropdown dropdown-bottom">
           <label tabindex="0" class="btn m-1 btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></label>
           <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-200 rounded-box w-52 mt-3">
-            <li><Link href='/Meditation/MeditationTimer'>Meditation Timer</Link></li>
-            <li><Link href='/Meditation/Guru'>Guru Chat</Link></li>
-            <li><Link href='/ChatPage'>Socratic Chat</Link></li>
-            <li><Link href='/Chat'>General Chat</Link></li>
-            <li><Link href='/test'>Quiz</Link></li>
+            <li><Link href='/Meditation/'>Meditation</Link></li>
+            <li><Link href='/Yoga/'>Yoga</Link></li>
+            <li><Link href='/Fitness'>Fitness</Link></li>
+            <li><Link href='/Nutrition'>Nutrition</Link></li>
+            <li><Link href='/Streangth'>Streangth</Link></li>
+            <li><Link href='/Sleep'>Sleep</Link></li>
+            <li><Link href='/Cheats'>Cheats</Link></li>
+            <li><Link href='/Chat'>Chat</Link></li>
           </ul>
         </div>
-
         <div class="flex-1">
           <Link href='//' class="btn btn-ghost text-primary normal-case text-xl font-extrabold">MINMAX</Link>
         </div>
