@@ -3,7 +3,7 @@ import Layout from '/components/layout';
 import Head from 'next/head';
 
 export default function Yogi() {
-  const [messages, setMessages] = useState([{ text: 'Welcome to yogi chat i can help you get a deeper understanding of yoga ask any question', user: '' }]);
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
 
@@ -53,7 +53,7 @@ export default function Yogi() {
         <div className="flex-grow overflow-auto bg-base-200 mb-2 rounded-md p-4">
           {messages.map((message, index) => (
             <div key={index} className={`my-3 p-2 md:p-3 rounded ${message.user === 'You' ? ' bg-base-100 shadow-xl ml-auto' : 'bg-base-100 shadow-xl mr-auto'}`} style={{ maxWidth: '90%' }}>
-              <strong>{message.user} </strong> {message.text}
+              <strong>{message.user}: </strong> {message.text}
             </div>
           ))}
           <div ref={endOfMessagesRef}></div>
