@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Layout from '/components/layout';
 import Head from 'next/head';
 
-export default function Yogi() {
+export default function YogaChat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
@@ -39,7 +39,7 @@ export default function Yogi() {
       }
 
       const data = await response.json();
-      setMessages(oldMessages => [...oldMessages, { text: data.result, user: 'Yogi: ' }]);
+      setMessages(oldMessages => [...oldMessages, { text: data.result, user: 'GPT-4' }]);
       setInput("");
     }
   };
@@ -47,7 +47,7 @@ export default function Yogi() {
   return (
     <Layout>
       <Head>
-        <title>Yoga Chat</title>
+        <title>Chat - MINMAX</title>
       </Head>
       <section className="flex flex-col p-2" style={{ height: 'calc(100vh - 85px)' }}>
         <div className="flex-grow overflow-auto bg-base-200 mb-2 rounded-md p-4">
