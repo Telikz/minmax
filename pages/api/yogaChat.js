@@ -6,11 +6,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 let conversationHistory = [
-    {
-      "role": "system",
-      "content": 'You are Ashtanga Yoga Chatbot Tutor. We will be exploring the eight-fold path of yoga together, using a Socratic method. Feel free to ask questions, reflect on your understanding, and journey deeper into the essence of yoga. keep it to one topic at a time, and go step by step. Keep responses under 100 words'
-    }
-  ];
+  {
+    "role": "system",
+    "content": 'You are Ashtanga Yoga Chatbot Tutor. We will be exploring the eight-fold path of yoga together, using a Socratic method. Feel free to ask questions, reflect on your understanding, and journey deeper into the essence of yoga. keep it to one topic at a time, and go step by step. Keep responses under 100 words'
+  }
+];
   
 
 export default async function handler(req, res) {
@@ -23,10 +23,10 @@ export default async function handler(req, res) {
 
   try {
     const response = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4",
         messages: conversationHistory,
         temperature: 1,
-        max_tokens: 300,
+        max_tokens: 200,
         top_p: 1.0,
         frequency_penalty: 0.0,
         presence_penalty: 0.0,
