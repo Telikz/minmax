@@ -3,9 +3,10 @@ import Layout from '/components/layout';
 import Head from 'next/head';
 
 export default function Yogi() {
-  const [messages, setMessages] = useState([{ text: 'Hello'}]);
+  const [messages, setMessages] = useState([{ text: 'Welcome to yogi chat i can help you get a deeper understanding of yoga ask any question', user: '' }]);
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
+
   const endOfMessagesRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -38,7 +39,7 @@ export default function Yogi() {
       }
 
       const data = await response.json();
-      setMessages(oldMessages => [...oldMessages, { text: data.result}]);
+      setMessages(oldMessages => [...oldMessages, { text: data.result, user: 'Yogi: ' }]);
       setInput("");
     }
   };
