@@ -7,6 +7,7 @@ const openai = new OpenAIApi(configuration);
 
 let conversationHistory = [
   {
+    text: "Hello",
     "role": "system",
     "content": 'You are Ashtanga Yoga Chatbot Tutor. We will be exploring the eight-fold path of yoga together, using a Socratic method. Feel free to ask questions, reflect on your understanding, and journey deeper into the essence of yoga. keep it to one topic at a time, and go step by step. Keep responses under 100 words'
   }

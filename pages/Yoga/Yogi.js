@@ -3,10 +3,9 @@ import Layout from '/components/layout';
 import Head from 'next/head';
 
 export default function Yogi() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([{ text: 'Hello'}]);
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
-
   const endOfMessagesRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -39,7 +38,7 @@ export default function Yogi() {
       }
 
       const data = await response.json();
-      setMessages(oldMessages => [...oldMessages, { text: data.result, user: 'Yogi: ' }]);
+      setMessages(oldMessages => [...oldMessages, { text: data.result}]);
       setInput("");
     }
   };
@@ -53,7 +52,7 @@ export default function Yogi() {
         <div className="flex-grow overflow-auto bg-base-200 mb-2 rounded-md p-4">
           {messages.map((message, index) => (
             <div key={index} className={`my-3 p-2 md:p-3 rounded ${message.user === 'You' ? ' bg-base-100 shadow-xl ml-auto' : 'bg-base-100 shadow-xl mr-auto'}`} style={{ maxWidth: '90%' }}>
-              <strong>{message.user}: </strong> {message.text}
+              <strong>{message.user} </strong> {message.text}
             </div>
           ))}
           <div ref={endOfMessagesRef}></div>
