@@ -1,8 +1,14 @@
 import Link from 'next/link';
+import Head from 'next/head';
+
 
 export default function Layout({ children, home }) {
   return (
+    
     <div className="min-h-screen flex flex-col" data-theme="dark">
+      <Head>
+        <link rel='icon' href='/icon2.png'/>
+      </Head>
       <div class="navbar bg-base-200 mb-auto">
         <div class="dropdown dropdown-bottom">
           <label tabindex="0" class="btn m-1 btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></label>

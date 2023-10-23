@@ -21,25 +21,25 @@ export default function AboutSleep() {
         </div>
         <div className='container mx-auto p-4'>
           <div className="grid gap-4">
-            <Link href='/Sleep/GettingStarted' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/Sleep/GettingStarted' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Getting Started</h2>
                 <p className=' text-center'>Learn the basics of healthy sleep and how to create an optimal sleep environment</p>
               </div>
             </Link>
-            <Link href='/Sleep/SleepHygiene' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/Sleep/SleepHygiene' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Sleep Hygiene</h2>
                 <p className=' text-center'>Discover practical tips and habits for improving the quality of your sleep</p>
               </div>
             </Link>
-            <Link href='/Sleep/SleepAids' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/Sleep/SleepAids' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Sleep Aids</h2>
                 <p className=' text-center'>Explore various tools and techniques to help you fall asleep faster and sleep more soundly</p>
               </div>
             </Link>
-            <Link href='/Sleep/SleepDisorders' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/Sleep/SleepDisorders' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Sleep Disorders</h2>
                 <p className=' text-center'>Learn about common sleep disorders and how to address them</p>

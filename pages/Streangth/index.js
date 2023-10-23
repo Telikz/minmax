@@ -21,25 +21,25 @@ export default function AboutStrengthTraining() {
         </div>
         <div className='container mx-auto p-4'>
           <div className="grid col-auto gap-4">
-            <Link href='/StrengthTraining/GettingStarted' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/StrengthTraining/GettingStarted' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Getting Started</h2>
                 <p className=' text-center'>Learn the basics of strength training and how to incorporate it into your routine</p>
               </div>
             </Link>
-            <Link href='/StrengthTraining/Weightlifting' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/StrengthTraining/Weightlifting' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Weightlifting</h2>
                 <p className=' text-center'>Discover various weightlifting exercises and techniques to build muscle strength</p>
               </div>
             </Link>
-            <Link href='/StrengthTraining/BodyweightExercises' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/StrengthTraining/BodyweightExercises' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Bodyweight Exercises</h2>
                 <p className=' text-center'>Explore bodyweight exercises that can be performed anywhere, without any equipment</p>
               </div>
             </Link>
-            <Link href='/StrengthTraining/ResistanceTraining' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/StrengthTraining/ResistanceTraining' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Resistance Training</h2>
                 <p className=' text-center'>Learn about resistance training techniques using bands, cables, and other tools</p>

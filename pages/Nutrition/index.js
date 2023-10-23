@@ -19,7 +19,7 @@ export default function IndexNutrition() {
           </div>
         </div><div className='container mx-auto p-4'>
           <div className="grid col-auto gap-4">
-            <Link href='/' class="card bg-base-100 shadow-xl image-full">
+            <Link href='/' class="card bg-base-100 shadow-xl image-full hover:bg-base-200">
               <div class="card-body items-center">
                 <h2 class="card-title text-center">Getting Started</h2>
                 <p className=' text-center'></p>

@@ -19,9 +19,9 @@ export default function YamaCourse() {
         </div>
         <div className="container mx-auto p-4 text-center">
           <h2 className="text-3xl font-semibold mb-4 text-center">The Five Yamas</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid gap-4">
             <Link href="/Yama/Ahimsa">
-              <div className="card bg-base-100 shadow-xl image-full ">
+              <div className="card bg-base-100 shadow-xl image-full hover:bg-base-200">
                 <div className="card-body items-center">
                   <h3 className="card-title">Ahimsa - Non-Violence</h3>
                   <h4></h4>
@@ -30,7 +30,7 @@ export default function YamaCourse() {
               </div>
             </Link>
             <Link href="/Yama/Satya">
-              <div className="card bg-base-100 shadow-xl image-full">
+              <div className="card bg-base-100 shadow-xl image-full hover:bg-base-200">
                 <div className="card-body items-center">
                   <h3 className="card-title">Satya - Truthfulness</h3>
                   <p>Committing to truth in thought, speech, and action.</p>
@@ -38,7 +38,7 @@ export default function YamaCourse() {
               </div>
             </Link>
             <Link href="/Yama/Asteya">
-              <div className="card bg-base-100 shadow-xl image-full">
+              <div className="card bg-base-100 shadow-xl image-full hover:bg-base-200">
                 <div className="card-body items-center">
                   <h3 className="card-title">Asteya - Non-Stealing</h3>
                   <p>Respecting the rights and property of others, cultivating contentment.</p>
@@ -47,7 +47,7 @@ export default function YamaCourse() {
             </Link>
 
             <Link href="/Yama/Brahmacharya">
-              <div className="card bg-base-100 shadow-xl image-full">
+              <div className="card bg-base-100 shadow-xl image-full hover:bg-base-200">
                 <div className="card-body items-center">
                   <h3 className="card-title">Brahmacharya - Right Use of Energy</h3>
                   <p>Directing our energy wisely, especially in relationships and personal pursuits.</p>
@@ -56,7 +56,7 @@ export default function YamaCourse() {
             </Link>
 
             <Link href="/Yama/Aparigraha">
-              <div className="card bg-base-100 shadow-xl image-full">
+              <div className="card bg-base-100 shadow-xl image-full hover:bg-base-200">
                 <div className="card-body items-center">
                   <h3 className="card-title">Aparigraha - Non-Possessiveness</h3>
                   <p>Letting go of attachment and understanding the impermanence of possessions.</p>
